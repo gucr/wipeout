@@ -20,6 +20,8 @@ const Wrapper = styled.div`
   height: 100vh;
   z-index: 100;
   opacity: .4;
+  top: 0;
+  left: 0;
   
   img {
     width: 100%;
