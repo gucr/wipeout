@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import {ReactNode} from "react";
-import {borderWidth, fontSet} from "../../theme.ts";
+import {borderWidth, colors, fontSet} from "../../theme.ts";
 
 interface Props {
   header: ReactNode,
@@ -14,7 +14,10 @@ const Menu = ({header, pageTitle, footerLine1, footerLine2, children, ...props}:
 
   return <Wrapper {...props}>
 
-    <Header>{header}</Header>
+    <Header>
+      {header}
+      <FsLogo src="/icon-f5000-header.svg" alt=""/>
+    </Header>
 
     <PageTitle>
       <span>{pageTitle}</span>
@@ -34,10 +37,11 @@ export default Menu
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 25rem 8rem 15rem 14rem;
   border: ${borderWidth.large} solid white;
   border-radius: 12rem 0 12rem 12rem;
   overflow: hidden;
+  margin: 25rem auto;
+  max-width: 120vh;
 `
 
 const Header = styled.header`
@@ -47,6 +51,11 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`
+
+const FsLogo = styled.img`
+  height: 80%;
+  margin-right: 5rem;
 `
 
 const Main = styled.main`
@@ -78,7 +87,7 @@ const Main = styled.main`
 const Footer = styled.footer`
   display: flex;
   height: 13rem;
-  background-color: #0b305e;
+  background-color: ${colors.backgroundLight};
 
   &:not(:last-child) {
     border-bottom: ${borderWidth.regular} solid white;
@@ -95,6 +104,7 @@ const Footer = styled.footer`
 
 const PageTitle = styled.div`
   border-bottom: ${borderWidth.regular} solid white;
+  background-color: ${colors.backgroundLight};
   height: 7rem;
   ${fontSet.info};
   padding-left: 7rem;

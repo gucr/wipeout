@@ -11,9 +11,10 @@ const Button = ({...props}:Props) => {
 
 export default Button
 
-const Wrapper = styled.div`
+const Wrapper = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 8rem;
+  cursor: pointer;
 `

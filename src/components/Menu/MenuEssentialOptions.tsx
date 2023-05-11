@@ -1,9 +1,11 @@
 import Menu from "./Menu.tsx";
 import Button from "../Button.tsx";
 import KeyHint from "../KeyHint.tsx";
+import styled from "styled-components";
 
 
 const MenuEssentialOptions = ({...props}) => {
+
 
   const footerLine1 = <Button>Start</Button>
 
@@ -19,7 +21,7 @@ const MenuEssentialOptions = ({...props}) => {
   </>
 
   return <Menu
-    header={<></>}
+    header={<Logo src="/logo.svg" alt="WipeOut 2097 logo"/>}
     pageTitle="Essential options"
     footerLine1={footerLine1}
     footerLine2={footerLine2}
@@ -29,10 +31,10 @@ const MenuEssentialOptions = ({...props}) => {
       <div>race<br/>type</div>
       <footer>arcade</footer>
     </a>
-    <div>
+    <a href={"#menu/team"}>
       <div>team</div>
       <footer>feisar</footer>
-    </div>
+    </a>
     <div>
       <div>class<br/> and<br/> track</div>
       <footer>talon's reach</footer>
@@ -41,3 +43,10 @@ const MenuEssentialOptions = ({...props}) => {
 }
 
 export default MenuEssentialOptions
+
+
+const Logo = styled.img`
+  height: 25rem;
+  width: 160rem;
+  margin-left: 8rem;
+`

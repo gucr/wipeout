@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import {RequestedPage} from "../App.tsx";
-import {fontSet} from "../theme.ts";
+import {colors, fontSet} from "../theme.ts";
 
 interface Props {
   input: string,
@@ -30,5 +30,10 @@ const Wrapper = styled.a`
   
   svg {
     width: 11rem;
+  }
+  
+  &:hover {
+    background-color: inherit;
+    color: ${colors.accent};
   }
 `

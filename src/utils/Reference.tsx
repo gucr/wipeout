@@ -19,9 +19,10 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: 100;
-  opacity: .4;
+  opacity: .5;
   top: 0;
   left: 0;
+  pointer-events: none;
   
   img {
     width: 100%;

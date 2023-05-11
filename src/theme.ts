@@ -1,21 +1,24 @@
 import {createGlobalStyle, css} from "styled-components";
 
 export const colors = {
-    background:'#030531',
-    accent: '#ebbc12'
+  background: '#030531',
+  backgroundLight: '#0b305e',
+  accent: '#ebbc12',
+  accent2: '#163c0a',
+  selection: '#5b122f',
 }
 
 export const borderWidth = {
-    large: '1.5rem',
-    regular: '.7rem',
-    small: '.35rem',
+  large: '1.5rem',
+  regular: '.7rem',
+  small: '.35rem',
 }
 
 export const fontSet = {
-    info: css`
-        font-size: 5.5rem;
-        font-family: 'F5000', 'monospace';
-    `
+  info: css`
+    font-size: 5.5rem;
+    font-family: 'F5000', 'monospace';
+  `
 }
 
 export const GlobalStyles = createGlobalStyle`
@@ -53,5 +56,9 @@ export const GlobalStyles = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+    
+    &:hover {
+      background-color: ${colors.selection};
+    }
   }
 `
