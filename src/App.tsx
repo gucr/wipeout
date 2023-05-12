@@ -3,12 +3,14 @@ import {useState} from "react";
 import MenuClassTrack from "./components/Menu/MenuClassTrack.tsx";
 import MenuTeam from "./components/Menu/MenuTeam.tsx";
 import MenuRaceType from "./components/Menu/MenuRaceType.tsx";
+import Loading from "./components/Loading.tsx";
 
 const pages = {
   'mainMenu': MenuEssentialOptions,
   'menu/race-type': MenuRaceType,
   'menu/class-track': MenuClassTrack,
   'menu/team': MenuTeam,
+  'loading': Loading,
 }
 
 export type RequestedPage = keyof typeof pages

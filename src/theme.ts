@@ -18,6 +18,10 @@ export const fontSet = {
   info: css`
     font-size: 5.5rem;
     font-family: 'F5000', 'monospace';
+  `,
+  amalgama: css`
+    font-size: 9rem;
+    font-family: 'Amalgama', monospace;
   `
 }
 
