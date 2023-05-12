@@ -4,6 +4,7 @@ import MenuClassTrack from "./components/Menu/MenuClassTrack.tsx";
 import MenuTeam from "./components/Menu/MenuTeam.tsx";
 import MenuRaceType from "./components/Menu/MenuRaceType.tsx";
 import Loading from "./components/Loading.tsx";
+import Race from "./components/Race.tsx";
 
 const pages = {
   'mainMenu': MenuEssentialOptions,
@@ -11,6 +12,7 @@ const pages = {
   'menu/class-track': MenuClassTrack,
   'menu/team': MenuTeam,
   'loading': Loading,
+  'race': Race,
 }
 
 export type RequestedPage = keyof typeof pages

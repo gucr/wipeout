@@ -6,7 +6,7 @@ import Reference from "./utils/Reference.tsx";
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Reference fileName=""/>
+    <Reference fileName="race.png"/>
     <GlobalStyles/>
     <App />
   </React.StrictMode>,
