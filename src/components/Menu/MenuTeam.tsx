@@ -42,7 +42,7 @@ const teams = {
   },
 }
 
-const MenuEssentialOptions = ({...props}) => {
+const MenuTeam = ({...props}) => {
 
   const [selectedTeam, setSelectedTeam] = useState('Feisar')
 
@@ -80,7 +80,7 @@ const MenuEssentialOptions = ({...props}) => {
   </Menu>
 }
 
-export default MenuEssentialOptions
+export default MenuTeam
 
 
 const Inputs = styled.div`

@@ -6,7 +6,7 @@ import {useState} from "react";
 import NavMenu from "../NavMenu.tsx";
 
 
-const MenuEssentialOptions = ({...props}) => {
+const MenuClassTrack = ({...props}) => {
 
   const classes = ['vector', 'venom', 'rapier']
 
@@ -38,7 +38,7 @@ const MenuEssentialOptions = ({...props}) => {
   </Menu>
 }
 
-export default MenuEssentialOptions
+export default MenuClassTrack
 
 
 const Inputs = styled.div`

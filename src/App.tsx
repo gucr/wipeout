@@ -1,11 +1,13 @@
 import MenuEssentialOptions from "./components/Menu/MenuEssentialOptions.tsx";
 import {useState} from "react";
-import MenuRacingMode from "./components/Menu/MenuRacingMode.tsx";
+import MenuClassTrack from "./components/Menu/MenuClassTrack.tsx";
 import MenuTeam from "./components/Menu/MenuTeam.tsx";
+import MenuRaceType from "./components/Menu/MenuRaceType.tsx";
 
 const pages = {
   'mainMenu': MenuEssentialOptions,
-  'menu/racing-mode': MenuRacingMode,
+  'menu/race-type': MenuRaceType,
+  'menu/class-track': MenuClassTrack,
   'menu/team': MenuTeam,
 }
 

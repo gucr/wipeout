@@ -27,7 +27,7 @@ const MenuEssentialOptions = ({...props}) => {
     footerLine2={footerLine2}
     {...props}
   >
-    <a href={"#menu/racing-mode"}>
+    <a href={"#menu/race-type"}>
       <div>race<br/>type</div>
       <footer>arcade</footer>
     </a>
@@ -35,10 +35,10 @@ const MenuEssentialOptions = ({...props}) => {
       <div>team</div>
       <footer>feisar</footer>
     </a>
-    <div>
+    <a href={"#menu/class-track"}>
       <div>class<br/> and<br/> track</div>
       <footer>talon's reach</footer>
-    </div>
+    </a>
   </Menu>
 }
 
