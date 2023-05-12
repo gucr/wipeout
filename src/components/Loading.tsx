@@ -41,6 +41,8 @@ const Loading = ({...props}: Props) => {
       <Percentage>{percentage}</Percentage>
       <div>{randomDigits(4, 12)}<br/>{randomDigits(4, 12)}</div>
 
+      <Separator/>
+
       <LoadCell>
         <div>% load</div>
         <div>33</div>
@@ -48,6 +50,8 @@ const Loading = ({...props}: Props) => {
         <div>33</div>
       </LoadCell>
       <div>{randomDigits(4, 12)}</div>
+
+      <Separator/>
 
       <TrackDetails>
         <div>Venue</div>
@@ -71,11 +75,7 @@ const Loading = ({...props}: Props) => {
       </TrackDetails>
       <div>
         <div>{randomDigits(1, 6)}</div>
-        <BarAnimation>
-          <TableGrid viewBox="0 0 422 140">
-            <path
-              d="M0 12h401M200 24h201M301 48h100M301 70h100M0 94h401M350 0v118M0 106h422v34H301V0m-51 0v118M200 0v118M151 0v118M101 0v118M51 0v118m350 0V0H0v118h422M26 106v12m50-12v12m50-12v12m50-12v12m49-12v12m50-11v11m51-12v12m49-12v12"/>
-
+          <TableGrid viewBox="0 0 422 140" overflow="visible">
             {Array.from({length: 50}, (_, index) =>
               <line
                 className="bar"
@@ -85,14 +85,14 @@ const Loading = ({...props}: Props) => {
                 y2={105}
                 x1={index * 6 + 4}
                 x2={index * 6 + 4}
-              >
-
-              </line>)}
+              />)}
+            <path d="M0 12h401M200 24h201M301 48h100M301 70h100M0 94h401M350 0v118M0 106h422v34H301V0m-51 0v118M200 0v118M151 0v118M101 0v118M51 0v118m350 0V0H0v118h422M26 106v12m50-12v12m50-12v12m50-12v12m49-12v12m50-11v11m51-12v12m49-12v12"/>
           </TableGrid>
-        </BarAnimation>
       </div>
 
     </Grid>
+
+    <RedBull src="/redbull-reaction-time.svg"/>
   </Wrapper>
 }
 
@@ -119,6 +119,12 @@ const Percentage = styled.div`
   font-size: 12rem;
 `
 
+const Separator = styled.div`
+  grid-column: 1/-1;
+  height: ${borderWidth.regular};
+  background-color: #fff;
+`
+
 const LoadCell = styled.div`
   display: flex;
   column-gap: 12rem;
@@ -140,10 +146,6 @@ const LoadingSquare = styled.div`
   }
 `
 
-const BarAnimation = styled.div`
-  position: relative;
-`
-
 const TrackDetails = styled.div`
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -153,10 +155,6 @@ const TrackDetails = styled.div`
 `
 
 const TableGrid = styled.svg`
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
   stroke-width: 3;
   stroke: #fff;
   fill: none;
@@ -174,4 +172,10 @@ const TableGrid = styled.svg`
     stroke: #eb0000;
     animation: fadeOut 400ms infinite;
   }
+`
+
+const RedBull = styled.img`
+  margin: 20rem auto 0;
+  display: block;
+  width: 200rem;
 `
